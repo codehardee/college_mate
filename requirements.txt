@@ -1,0 +1,12 @@
+Django~=4.0.5
+
+pip~=23.2
+
+Pillow~=9.5.0
+
+
+asgiref~=3.5.2
+sqlparse~=0.4.2
+
+requests~=2.31.0
+djangorestframework~=3.14.0
