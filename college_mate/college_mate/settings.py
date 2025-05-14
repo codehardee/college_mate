@@ -56,7 +56,9 @@ AUTH_USER_MODEL = 'authentication.StudentAccountCreation'
 LIBRARY_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
-    'rest_framework_simplejwt'
+    'rest_framework_simplejwt',
+    'drf_yasg',
+    'corsheaders'
 ]
 INSTALLED_APPS = DEFAULT_APPS + PROJECT_APPS + LIBRARY_APPS
 
@@ -72,6 +74,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 
@@ -108,12 +112,12 @@ WSGI_APPLICATION = 'college_mate.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'newdb',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
-        'PORT': 5432, # default PostgreSQL port
+         'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'college_mate_db',  # The name of your database
+        'USER': 'college_user',     # The username you created
+        'PASSWORD': 'Hardee@2611', # The password for the user
+        'HOST': 'localhost',        # The database host (usually localhost for local development)
+        'PORT': '5432', # default PostgreSQL port
     }
 }
 
@@ -192,5 +196,8 @@ SIMPLE_JWT = {
     'JTI_CLAIM': 'jti',
 
 }
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173',
+]
 
 
