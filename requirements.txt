@@ -1,12 +1,11 @@
-Django~=4.0.5
+Django==4.0.10
+Pillow==9.5.0
+asgiref==3.5.2
+sqlparse==0.4.2
+requests==2.31.0
+djangorestframework==3.14.0
 
-pip~=23.2
-
-Pillow~=9.5.0
-
-
-asgiref~=3.5.2
-sqlparse~=0.4.2
-
-requests~=2.31.0
-djangorestframework~=3.14.0
+gunicorn==23.0.0
+psycopg2-binary==2.9.10
+django-cors-headers==4.3.0
+dj-database-url==2.2.0
